@@ -1,3 +1,6 @@
+function Tela_inicial () {
+    game.splash("O fantasminha")
+}
 function criarInimigo () {
     Inimigo = sprites.create(img`
         . . f f f . . . . . . . . f f f 
@@ -137,6 +140,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 let Inimigo: Sprite = null
 let Comida: Sprite = null
 let Fantasminha: Sprite = null
+Tela_inicial()
+game.showLongText(" Desvie do morceguinho e pegue os pontos estrelas", DialogLayout.Full)
 scene.setBackgroundImage(img`
     fffffffcbccffffffffffcfbddddddddddd111111111111111111111111dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddbffcddffffffcfcfffff
     fffffffccffffcffffffbfddddddddd11111111111111111111111111111111ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddfccdbffffffffffffff
